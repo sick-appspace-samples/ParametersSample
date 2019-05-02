@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+    <application name="ParametersSample">
+        <crown name="ParametersSample">
+            <desc>user script</desc>
+            <serves>
+                <function name="savePermanent">
+                    <desc>Stores the current parameters permanently</desc>
+                </function>
+            </serves>
+        </crown>
+        <meta key="author">AppSpace Sample</meta>
+        <meta key="version">2.5.0</meta>
+        <meta key="licensed">false</meta>
+        <meta key="priority">low</meta>
+        <meta key="tags">Getting Started,System,Page</meta>
+        <meta key="read-protected">false</meta>
+        <meta key="copy-protected">false</meta>
+        <entry path="pages" default="Parameters.msdd">
+            <file type="application/zip">Parameters.msdd</file>
+        </entry>
+        <entry path="parameters">
+            <file type="text/xml">SampleParameters.cid.xml</file>
+        </entry>
+        <entry path="scripts" default="Parameters.lua">
+            <file type="text/x-lua">Parameters.lua</file>
+        </entry>
+    </application>
+</manifest>
