@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <manifest>
     <application name="ParametersSample">
         <crown name="ParametersSample">
@@ -11,19 +11,10 @@
         </crown>
         <meta key="author">AppSpace Sample</meta>
         <meta key="version">2.5.0</meta>
-        <meta key="licensed">false</meta>
         <meta key="priority">low</meta>
         <meta key="tags">Getting Started,System,Page</meta>
         <meta key="read-protected">false</meta>
         <meta key="copy-protected">false</meta>
-        <entry path="pages" default="Parameters.msdd">
-            <file type="application/zip">Parameters.msdd</file>
-        </entry>
-        <entry path="parameters">
-            <file type="text/xml">SampleParameters.cid.xml</file>
-        </entry>
-        <entry path="scripts" default="Parameters.lua">
-            <file type="text/x-lua">Parameters.lua</file>
-        </entry>
+        <entry default="Parameters.lua" path="scripts"/>
     </application>
 </manifest>

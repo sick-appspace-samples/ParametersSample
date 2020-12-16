@@ -1,0 +1,29 @@
+<layout-column id="ColumnLayout1">
+	
+	
+		
+		
+		
+		
+		
+	<davinci-value-display id="ValueDisplay1" label="Sample Integer">
+		<sopas-binding property="value" name="ASampleIntegerVar" auto-update="1000" update-on-resume></sopas-binding>
+	</davinci-value-display>
+	<layout-column id="ColumnLayout2" style="flex-grow:0">
+		<h6 id="Heading61" style="margin-top:5px;margin-bottom:5px;">Sample Float</h6>
+		<davinci-numeric-field id="NumericField1" type="outline" max="+Infinity" ticks="1" group-separator="," decimal-separator="." format-pattern="0">
+			<sopas-binding property="value" name="ASampleFloatVar" auto-update="1000" update-on-resume></sopas-binding>
+			<sopas-binding event="change" name="ASampleFloatVar" auto-commit></sopas-binding>
+	</davinci-numeric-field>
+	</layout-column>
+	
+	<davinci-text-field id="TextField1" type="text" label="Sample String">
+		<sopas-binding property="value" name="ASampleStringVar" auto-update="1000" update-on-resume></sopas-binding>
+		<sopas-binding event="change" name="ASampleStringVar" auto-commit></sopas-binding>
+	</davinci-text-field>
+	<davinci-button id="Button1" type="primary">
+		<span>Save permanent</span>
+		<crown-binding event="submit" name="ParametersSample/savePermanent" auto-commit></crown-binding>
+	</davinci-button>
+  
+</layout-column>
