@@ -67,7 +67,6 @@ end
 Connector.DigitalIn.register(DI1Port, "OnChange", handleIN1Change)
 
 --Declaration of the 'main' function as an entry point for the event loop
---@main()
 local function main()
   -- call the read function directly after start up
   readAll()
