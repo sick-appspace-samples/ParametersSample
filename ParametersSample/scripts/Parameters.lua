@@ -6,7 +6,7 @@ local DI1Port = Connector.DigitalIn.create("DI1")
 
 --End of Global Scope-----------------------------------------------------------
 
--- This function reads all variables
+---This function reads all variables
 local function readAll()
   -- Reading the device type. This is an internal variable
   local value = Parameters.get("DItype")
@@ -47,8 +47,8 @@ local function readAll()
   end
 end
 
--- This callback function reads a parameter, increments it by one and
--- stores the new value. The 'apply' trigges the change event.
+---This callback function reads a parameter, increments it by one and
+---stores the new value. The 'apply' trigges the change event.
 local function handleIN1Change()
   local value = Parameters.get("ASampleIntegerVar")
   if (value ~= nil) then
@@ -66,8 +66,7 @@ end
 --Registration of the 'handleIN1Change' function to the 'OnChange' event of DI1
 Connector.DigitalIn.register(DI1Port, "OnChange", handleIN1Change)
 
---Declaration of the 'main' function as an entry point for the event loop
---@main()
+---Declaration of the 'main' function as an entry point for the event loop
 local function main()
   -- call the read function directly after start up
   readAll()
@@ -76,14 +75,14 @@ end
 --Registration of the 'main' function to the 'Engine.OnStarted' event
 Script.register("Engine.OnStarted", main)
 
--- This callback function is called as soon any parameter has changed
+---This callback function is called as soon any parameter has changed
 local function handleOnParametersChanged()
   readAll()
 end
 --Registration of the 'handleOnParametersChanged' function to the 'Parameters.OnChange' event
 Script.register("Parameters.OnParametersChanged", handleOnParametersChanged)
 
--- This function is called from the webpage button to store the parameters permanent
+---This function is called from the webpage button to store the parameters permanent
 local function savePermanent()
   Parameters.savePermanent()
   print("Parameters are stored permanently now")
